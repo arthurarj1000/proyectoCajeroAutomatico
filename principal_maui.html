@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página principal Cajero automático</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/app.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenida Maui a tu cuenta de banco</h1>
+    </header>
+
+    <main>
+        <div id="consultarsaldoMaui">
+            <input type="button" value="Consultar saldo" onclick="consultarSaldo('Maui')">
+        </div>
+
+        <div id="ingresarmontoMaui">
+            <input type="button" value="Ingresar monto" onclick="alternarCampoIngresarMonto('campoIngresarMontoMaui')">
+        </div>
+        <div id="campoIngresarMontoMaui" style="display: none;">
+            <label for="montoDeseadoMaui">Ingresa el monto deseado:</label>
+            <input type="text" name="c" id="montoDeseadoMaui">
+            <input type="button" value="Ingresar" onclick="ingresarMonto('Maui', 'montoDeseadoMaui', 'campoIngresarMontoMaui')">
+        </div>
+
+        <div id="retirarmontoMaui">
+            <input type="button" value="Retirar monto" onclick="alternarCampoRetirarMonto('campoIngresarRetirarMontoMaui')">
+        </div>
+        <div id="campoIngresarRetirarMontoMaui" style="display: none;">
+            <label for="retirarmontoDeseadoMaui">Ingresa el retiro del monto deseado:</label>
+            <input type="text" name="c" id="retirarmontoDeseadoMaui">
+            <input type="button" value="Ingresar" onclick="retirarMonto('Maui', 'retirarmontoDeseadoMaui', 'campoIngresarRetirarMontoMaui')">
+        </div>
+        
+    </main>
+
+    
+</body>
+</html>

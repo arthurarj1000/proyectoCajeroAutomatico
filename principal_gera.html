@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página principal Cajero automático</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/app.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenida Gera a tu cuenta de banco</h1>
+    </header>
+
+    <main>
+        <div id="consultarsaldoGera">
+            <input type="button" value="Consultar saldo" onclick="consultarSaldo('Gera')">
+        </div>
+
+        <div id="ingresarmontoGera">
+            <input type="button" value="Ingresar monto" onclick="alternarCampoIngresarMonto('campoIngresarMontoGera')">
+        </div>
+        <div id="campoIngresarMontoGera" style="display: none;">
+            <label for="montoDeseadoGera">Ingresa el monto deseado:</label>
+            <input type="text" name="c" id="montoDeseadoGera">
+            <input type="button" value="Ingresar" onclick="ingresarMonto('Gera', 'montoDeseadoGera', 'campoIngresarMontoGera')">
+        </div>
+
+        <div id="retirarmontoGera">
+            <input type="button" value="Retirar monto" onclick="alternarCampoRetirarMonto('campoIngresarRetirarMontoGera')">
+        </div>
+        <div id="campoIngresarRetirarMontoGera" style="display: none;">
+            <label for="retirarmontoDeseadoGera">Ingresa el retiro del monto deseado:</label>
+            <input type="text" name="c" id="retirarmontoDeseadoGera">
+            <input type="button" value="Ingresar" onclick="retirarMonto('Gera', 'retirarmontoDeseadoGera', 'campoIngresarRetirarMontoGera')">
+        </div>
+        
+    </main>
+
+    
+</body>
+</html>
