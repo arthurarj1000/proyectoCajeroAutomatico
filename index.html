@@ -4,43 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cajero automático</title>
-    <link rel="stylesheet" href="./css/style.css">
     <script src="./js/app.js"></script>
-</head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head> 
 
 <body>
     <header>
-        <h1>Login</h1>
+        <div class="card-content">
+            <h1 class="title is-1">Login</h1>
+            <div class="ml-6">
+                <p class="subtitle">Cuentas:</p>
+            </div>
+        </div>
     </header>
 
     <main>
-        <div id="botonMali">
-            <input type="button" value="Mali" onclick="alternarCampoContraseña('campoContraseñaMali')">
-        </div>
-        <div id="campoContraseñaMali" style="display: none;">
-            <label for="contraseñaInputMali">Password</label>
-            <input type="password" name="c" id="contraseñaInputMali">
-            <input type="button" value="Ingresar" onclick="login('campoContraseñaMali')">
-        </div>
-
-        <div id="botonGera">
-            <input type="button" value="Gera" onclick="alternarCampoContraseña('campoContraseñaGera')">
-        </div>
-        <div id="campoContraseñaGera" style="display: none;">
-            <label for="contraseñaInputGera">Password</label>
-            <input type="password" name="c" id="contraseñaInputGera">
-            <input type="button" value="Ingresar" onclick="login('campoContraseñaGera')">
+        <div class="p-6">
+            <div class="buttons has-addons is-centered">
+                <div class="field is-grouped">
+                    <div id="botonMali" class="buttons are-medium" class="button is-medium is-responsive" class="button is-medium is-fullwidth">
+                        <input type="button" class="button is-black"  value="Mali" onclick="alternarCampoContraseña('campoContraseñaMali')">
+                    </div>
+                    <div id="campoContraseñaMali" style="display: none;">
+                        <label for="contraseñaInputMali">Password</label>
+                        <input type="password" name="c" id="contraseñaInputMali">
+                        <input type="button" value="Ingresar" class="button is-success" onclick="login('campoContraseñaMali')">
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div id="botonMaui">
-            <input type="button" value="Maui" onclick="alternarCampoContraseña('campoContraseñaMaui')">
+        <div class="p-6">
+            <div class="buttons has-addons is-centered">
+                <div class="field is-grouped">
+                    <div id="botonGera" class="buttons are-medium" class="button is-medium is-responsive" class="button is-medium is-fullwidth">
+                        <input type="button" class="button is-black" value="Gera" onclick="alternarCampoContraseña('campoContraseñaGera')">
+                    </div>
+                    <div id="campoContraseñaGera" style="display: none;">
+                        <label for="contraseñaInputGera">Password</label>
+                        <input type="password" name="c" id="contraseñaInputGera">
+                        <input type="button" value="Ingresar" class="button is-success" onclick="login('campoContraseñaGera')">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="campoContraseñaMaui" style="display: none;">
-            <label for="contraseñaInputMaui">Password</label>
-            <input type="password" name="c" id="contraseñaInputMaui">
-            <input type="button" value="Ingresar" onclick="login('campoContraseñaMaui')">
+
+        <div class="p-6">
+            <div class="buttons has-addons is-centered">
+                <div class="field is-grouped">
+                    <div id="botonMaui" class="buttons are-medium" class="button is-medium is-responsive" class="button is-medium is-fullwidth">
+                        <input type="button" class="button is-black" value="Maui" onclick="alternarCampoContraseña('campoContraseñaMaui')">
+                    </div>
+                    <div id="campoContraseñaMaui" style="display: none;">
+                        <label for="contraseñaInputMaui">Password</label>
+                        <input type="password" name="c" id="contraseñaInputMaui">
+                        <input type="button" value="Ingresar" class="button is-success" onclick="login('campoContraseñaMaui')">
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
-
 </body>
 </html>
