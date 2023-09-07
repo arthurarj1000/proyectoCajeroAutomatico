@@ -10,31 +10,60 @@
 
 <body>
     <header>
-        <h1>Bienvenida Mali a tu cuenta de banco</h1>
+        <div class="card-content">
+            <h1 class="title is-1">Bienvenida Mali a tu cuenta de banco</h1>
+            <div class="ml-6">
+                <p class="subtitle">Elije alguna de estas opciones dependiendo lo que desees:</p>
+            </div>
+        </div>
     </header>
 
     <main>
-        <div id="consultarsaldoMali">
-            <input type="button" value="Consultar saldo" onclick="consultarSaldo('Mali')">
+        <div class="p-6">
+            <div class="buttons has-addons is-centered">
+                <div class="field is-grouped">
+                    <div id="consultarsaldoMali" class="buttons are-medium" class="button is-medium is-responsive" class="button is-medium is-fullwidth">
+                        <input type="button" value="Consultar saldo" class="button is-black" onclick="consultarSaldo('Mali')">
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div id="ingresarmontoMali">
-            <input type="button" value="Ingresar monto" onclick="alternarCampoIngresarMonto('campoIngresarMontoMali')">
-        </div>
-        <div id="campoIngresarMontoMali" style="display: none;">
-            <label for="montoDeseadoMali">Ingresa el monto deseado:</label>
-            <input type="text" name="c" id="montoDeseadoMali">
-            <input type="button" value="Ingresar" onclick="ingresarMonto('Mali', 'montoDeseadoMali', 'campoIngresarMontoMali')">
+
+        <div class="p-6">
+            <div class="buttons has-addons is-centered">
+                <div class="field is-grouped">
+                    <div id="ingresarmontoMali" class="buttons are-medium" class="button is-medium is-responsive" class="button is-medium is-fullwidth">
+                        <input type="button" value="Ingresar monto" class="button is-black" onclick="alternarCampoIngresarMonto('campoIngresarMontoMali')">
+                    </div>
+                    <div id="campoIngresarMontoMali" class="p-6" style="display: none;">
+                        <label for="montoDeseadoMali">Ingresa el monto deseado:</label>
+                        <input type="text" name="c" class="input is-small" id="montoDeseadoMali">
+                        <div class="mt-2">
+                            <input type="button" value="Ingresar" class="button is-success" onclick="ingresarMonto('Mali', 'montoDeseadoMali', 'campoIngresarMontoMali')">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div id="retirarmontoMali">
-            <input type="button" value="Retirar monto" onclick="alternarCampoRetirarMonto('campoIngresarRetirarMontoMali')">
+        <div class="p-6">
+            <div class="buttons has-addons is-centered">
+                <div class="field is-grouped">
+                    <div id="retirarmontoMali" class="buttons are-medium" class="button is-medium is-responsive" class="button is-medium is-fullwidth">
+                        <input type="button" value="Retirar monto" class="button is-black" onclick="alternarCampoRetirarMonto('campoIngresarRetirarMontoMali')">
+                    </div>
+                    <div id="campoIngresarRetirarMontoMali" class="p-6" style="display: none;">
+                        <label for="retirarmontoDeseadoMali">Ingresa el retiro del monto deseado:</label>
+                        <input type="text" name="c" class="input is-small" id="retirarmontoDeseadoMali">
+                        <div class="mt-2">
+                            <input type="button" value="Ingresar" class="button is-success" onclick="retirarMonto('Mali', 'retirarmontoDeseadoMali', 'campoIngresarRetirarMontoMali')">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="campoIngresarRetirarMontoMali" style="display: none;">
-            <label for="retirarmontoDeseadoMali">Ingresa el retiro del monto deseado:</label>
-            <input type="text" name="c" id="retirarmontoDeseadoMali">
-            <input type="button" value="Ingresar" onclick="retirarMonto('Mali', 'retirarmontoDeseadoMali', 'campoIngresarRetirarMontoMali')">
-        </div>
+
         
     </main>
 

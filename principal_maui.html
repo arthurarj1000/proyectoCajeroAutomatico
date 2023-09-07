@@ -4,37 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página principal Cajero automático</title>
-    <script src="./js1/app.js"></script>
+    <script src="./js/app.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
 <body>
     <header>
-        <h1>Bienvenida Maui a tu cuenta de banco</h1>
+        <div class="card-content">
+            <h1 class="title is-1">Bienvenido Maui a tu cuenta de banco</h1>
+            <div class="ml-6">
+                <p class="subtitle">Elije alguna de estas opciones dependiendo lo que desees:</p>
+            </div>
+        </div>
     </header>
 
     <main>
-        <div id="consultarsaldoMaui">
-            <input type="button" value="Consultar saldo" onclick="consultarSaldo('Maui')">
+        <div class="p-6">
+            <div class="buttons has-addons is-centered">
+                <div class="field is-grouped">
+                    <div id="consultarsaldoMaui" class="buttons are-medium" class="button is-medium is-responsive" class="button is-medium is-fullwidth">
+                        <input type="button" value="Consultar saldo" class="button is-black" onclick="consultarSaldo('Maui')">
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div id="ingresarmontoMaui">
-            <input type="button" value="Ingresar monto" onclick="alternarCampoIngresarMonto('campoIngresarMontoMaui')">
-        </div>
-        <div id="campoIngresarMontoMaui" style="display: none;">
-            <label for="montoDeseadoMaui">Ingresa el monto deseado:</label>
-            <input type="text" name="c" id="montoDeseadoMaui">
-            <input type="button" value="Ingresar" onclick="ingresarMonto('Maui', 'montoDeseadoMaui', 'campoIngresarMontoMaui')">
+        <div class="p-6">
+            <div class="buttons has-addons is-centered">
+                <div class="field is-grouped">
+                    <div id="ingresarmontoMaui" class="buttons are-medium" class="button is-medium is-responsive" class="button is-medium is-fullwidth">
+                        <input type="button" value="Ingresar monto" class="button is-black" onclick="alternarCampoIngresarMonto('campoIngresarMontoMaui')">
+                    </div>
+                    <div id="campoIngresarMontoMaui" class="p-6" style="display: none;">
+                        <label for="montoDeseadoMaui">Ingresa el monto deseado:</label>
+                        <input type="text" name="c" class="input is-small" id="montoDeseadoMaui">
+                        <div class="mt-2">
+                            <input type="button" value="Ingresar" class="button is-success" onclick="ingresarMonto('Maui', 'montoDeseadoMaui', 'campoIngresarMontoMaui')">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div id="retirarmontoMaui">
-            <input type="button" value="Retirar monto" onclick="alternarCampoRetirarMonto('campoIngresarRetirarMontoMaui')">
+        <div class="p-6">
+            <div class="buttons has-addons is-centered">
+                <div class="field is-grouped">
+                    <div id="retirarmontoMaui" class="buttons are-medium" class="button is-medium is-responsive" class="button is-medium is-fullwidth">
+                        <input type="button" value="Retirar monto" class="button is-black" onclick="alternarCampoRetirarMonto('campoIngresarRetirarMontoMaui')">
+                    </div>
+                    <div id="campoIngresarRetirarMontoMaui" class="p-6" style="display: none;">
+                        <label for="retirarmontoDeseadoMaui">Ingresa el retiro del monto deseado:</label>
+                        <input type="text" name="c" class="input is-small" id="retirarmontoDeseadoMaui">
+                        <div class="mt-2">
+                            <input type="button" value="Ingresar" class="button is-success" onclick="retirarMonto('Maui', 'retirarmontoDeseadoMaui', 'campoIngresarRetirarMontoMaui')">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="campoIngresarRetirarMontoMaui" style="display: none;">
-            <label for="retirarmontoDeseadoMaui">Ingresa el retiro del monto deseado:</label>
-            <input type="text" name="c" id="retirarmontoDeseadoMaui">
-            <input type="button" value="Ingresar" onclick="retirarMonto('Maui', 'retirarmontoDeseadoMaui', 'campoIngresarRetirarMontoMaui')">
-        </div>
+
         
     </main>
 

@@ -10,31 +10,59 @@
 
 <body>
     <header>
-        <h1>Bienvenida Gera a tu cuenta de banco</h1>
+        <div class="card-content">
+            <h1 class="title is-1">Bienvenido Gera a tu cuenta de banco</h1>
+            <div class="ml-6">
+                <p class="subtitle">Elije alguna de estas opciones dependiendo lo que desees:</p>
+            </div>
+        </div>
     </header>
 
     <main>
-        <div id="consultarsaldoGera">
-            <input type="button" value="Consultar saldo" onclick="consultarSaldo('Gera')">
+        <div class="p-6">
+            <div class="buttons has-addons is-centered">
+                <div class="field is-grouped">
+                    <div id="consultarsaldoGera" class="buttons are-medium" class="button is-medium is-responsive" class="button is-medium is-fullwidth">
+                        <input type="button" value="Consultar saldo" class="button is-black" onclick="consultarSaldo('Gera')">
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div id="ingresarmontoGera">
-            <input type="button" value="Ingresar monto" onclick="alternarCampoIngresarMonto('campoIngresarMontoGera')">
-        </div>
-        <div id="campoIngresarMontoGera" style="display: none;">
-            <label for="montoDeseadoGera">Ingresa el monto deseado:</label>
-            <input type="text" name="c" id="montoDeseadoGera">
-            <input type="button" value="Ingresar" onclick="ingresarMonto('Gera', 'montoDeseadoGera', 'campoIngresarMontoGera')">
+        <div class="p-6">
+            <div class="buttons has-addons is-centered">
+                <div class="field is-grouped">
+                    <div id="ingresarmontoGera" class="buttons are-medium" class="button is-medium is-responsive" class="button is-medium is-fullwidth">
+                        <input type="button" value="Ingresar monto" class="button is-black" onclick="alternarCampoIngresarMonto('campoIngresarMontoGera')">
+                    </div>
+                    <div id="campoIngresarMontoGera" class="p-6" style="display: none;">
+                        <label for="montoDeseadoGera">Ingresa el monto deseado:</label>
+                        <input type="text" name="c" class="input is-small" id="montoDeseadoGera">
+                        <div class="mt-2">
+                            <input type="button" value="Ingresar" class="button is-success" onclick="ingresarMonto('Gera', 'montoDeseadoGera', 'campoIngresarMontoGera')">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div id="retirarmontoGera">
-            <input type="button" value="Retirar monto" onclick="alternarCampoRetirarMonto('campoIngresarRetirarMontoGera')">
+        <div class="p-6">
+            <div class="buttons has-addons is-centered">
+                <div class="field is-grouped">
+                    <div id="retirarmontoGera" class="buttons are-medium" class="button is-medium is-responsive" class="button is-medium is-fullwidth">
+                        <input type="button" value="Retirar monto" class="button is-black" onclick="alternarCampoRetirarMonto('campoIngresarRetirarMontoGera')">
+                    </div>
+                    <div id="campoIngresarRetirarMontoGera" class="p-6" style="display: none;">
+                        <label for="retirarmontoDeseadoGera">Ingresa el retiro del monto deseado:</label>
+                        <input type="text" name="c" class="input is-small" id="retirarmontoDeseadoGera">
+                        <div class="mt-2">
+                            <input type="button" value="Ingresar" class="button is-success" onclick="retirarMonto('Gera', 'retirarmontoDeseadoGera', 'campoIngresarRetirarMontoGera')">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="campoIngresarRetirarMontoGera" style="display: none;">
-            <label for="retirarmontoDeseadoGera">Ingresa el retiro del monto deseado:</label>
-            <input type="text" name="c" id="retirarmontoDeseadoGera">
-            <input type="button" value="Ingresar" onclick="retirarMonto('Gera', 'retirarmontoDeseadoGera', 'campoIngresarRetirarMontoGera')">
-        </div>
+
         
     </main>
 
